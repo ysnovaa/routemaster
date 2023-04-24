@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Generic Transfer - Planos Siesa UnoEE</title>
+    <title>SONAR</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="keywords" content="archivos planos,planos,conectores,estructruas, siesa, Siesa, sistema erp, erp, ERP, Sistema ERP, solución software erp, solucion software erp, solucion software, Programa contable, programa, contable, Software ERP, Software contable, Software de inventarios, inventarios, Software de nómina, nomina, Nomina, Nómina, sistemas, sistemas de informacion, sistemas de información, sistemas de información s.a., sistemas de información S.A., sistemas de información sa, sistemas de información SA" />
 
@@ -93,7 +93,7 @@
                         <td style="padding-top: 5px">
                             <img src="imagenes/logo_ge_pie.png" />
                         </td>
-                        <td>TODOS LOS DERECHOS RESERVADOS 2020
+                        <td>TODOS LOS DERECHOS RESERVADOS 2023
                         -
                         <asp:Label ID="lblDerechos" runat="server"></asp:Label>
                             &nbsp;</td>
