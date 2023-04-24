@@ -7,4 +7,5 @@
 
 ## Profesor: 
 - Paola Vallejo, pvallej3@eafit.edu.co
+
 Plataforma Web interna que permite realizar la programación semanal de forma sencilla e intuitiva de todo su parque automotor, esta tendrá la capacidad de recibir los parámetros y las condiciones requeridas para asignar los conductores a los vehículos y estos a su vez a la ruta operativa.
