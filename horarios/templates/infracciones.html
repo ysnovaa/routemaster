@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Control de infracciones</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre completo</th>
+            <th scope="col">Control</th>
+            <th scope="col">Minutos</th>
+            <th scope="col">Sanción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Juan José Uribe Villa</td>
+            <td>San Ignacio</td>
+            <td>1</td>
+            <td>Monetaria</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jhojan Alexander Parias Gómez</td>
+            <td>P. Madre Laura</td>
+            <td>3</td>
+            <td>Monetaria</td>
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-outline-success my-2 my-sm-0 text-end" href="/horarios/infracciones/"><i
+    class="fa fa-car-crash"></i>Nuevo rastreo</a>
+
+{% endblock %}

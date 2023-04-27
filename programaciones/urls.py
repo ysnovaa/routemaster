@@ -25,7 +25,9 @@ urlpatterns = [
     path('horarios/crear_conductor/', views.crear_conductor, name='crear_conductor'), 
     path('horarios/ver_conductores/', views.ver_conductores, name='ver_conductores'),
     path('horarios/ver_conductores/<int:id>/', views.ver_detalle_conductor, name='ver_detalle_conductor'),
-    path('rutas/', views.rutas, name='rutas'),
+    path('horarios/rutas/', views.rutas, name='rutas'),
+    path('horarios/infracciones/', views.infracciones, name='infracciones'),
+    path('horarios/reportes/', views.reportes, name='reportes'),
     path('logout/', views.signout, name='logout'),
     path('sigin/', views.sigin, name='sigin'),
     

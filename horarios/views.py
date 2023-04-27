@@ -89,5 +89,12 @@ def sigin(request):
         else:
             login(request, user)
             return redirect('horarios')
+
 def rutas(request):
     return render(request, 'rutas.html')
+
+def infracciones(request):
+    return render(request, 'infracciones.html')
+
+def reportes(request):
+    return render(request, 'reportes.html')
