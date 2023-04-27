@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Listado de conductores</h1>
+
+<ul>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Nombres y apellidos</th>
+                    <th scope="col">Tipo de licencia</th>
+                    <th scope="col">Bus asignado</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for conductor in conductores %}
+                <tr>
+                    <th scope="row">{{conductor.id}}</th>
+                    <th>{{conductor.documento}}</th>
+                    <td>{{conductor.nombre_completo}}</td>
+                    <td>{{conductor.tipo_licencia}}</td>
+                    <td>{{conductor.bus_asignado}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a class="btn btn-sm btn-success" href="{% url 'ver_detalle_conductor' conductor.id %}" ><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-sm btn-info"><i class="fa fa-book"></i></a>
+                            <a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-primary btn-rounded btn-lg" href="/horarios/">
+            Regresar
+        </a>
+    </div>
+</ul>
+
+
+{% endblock %}

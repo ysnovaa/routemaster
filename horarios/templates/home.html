@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-3 text-uppercase text-center mb-5">Zona administrativa<span class="text-primary"></span></h1>
+<h5 class="text-secondary text-center">Bienvenido al Centro de Mando Operacional - CMO de Transportes Aranjuez Santa
+    Cruz S.A. por favor inicie sesión para continuar...</h5>
+<br><br>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5><i class="fa fa-5x fa-user"></i></h5>
+                <h5 class="card-title">Administrador</h5>
+                <p class="card-text">Usuario encargado de crear usuarios operativos y controlar el flujo principal del
+                    sistema. </p>
+                <a href="admin" class="btn btn-primary">Ingresa</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5><i class="fa fa-5x fa-users"></i></h5>
+                <h5 class="card-title">Operador</h5>
+                <p class="card-text">Personal operativo de la plataforma, encargado de generar los reportes de cada
+                    conductor.</p>
+                <a href="sigin" class="btn btn-primary">Ingresa</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

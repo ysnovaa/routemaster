@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Vista principal</h1>
+<!--
+<li>
+    <a href="crear_conductor">Crear conductor</a>
+</li>
+<li>
+    <a href="crear_conductor">Crear ruta</a>
+</li>
+-->
+<br>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5><i class="fa fa-5x fa-users-cog"></i></h5>
+                <h5 class="card-title">Consultar conductores</h5>
+                <p class="card-text">Vista global de los conductores activos</p>
+                <a href="ver_conductores" class="btn btn-primary">Ver conductores</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5><i class="fa fa-5x fa-route"></i></h5>
+                <h5 class="card-title">Mapa principal de rutas</h5>
+                <p class="card-text">Ver las rutas y los vehículos activos</p>
+                <a href="/rutas/" class="btn btn-primary">Ver rutas</a>
+            </div>
+        </div>
+    </div>
+    <!-- 
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5><i class="fa fa-5x fa-user"></i></h5>
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5><i class="fa fa-5x fa-book-open"></i></h5>
+                <h5 class="card-title">Reporte generado conductor-servicio</h5>
+                <p class="card-text">Generación de programaciones</p>
+                <a href="#" class="btn btn-primary">Ver reportes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

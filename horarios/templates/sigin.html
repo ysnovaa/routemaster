@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-body">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg?w=740&t=st=1682542435~exp=1682543035~hmac=d92f16c7378e59c91c0dbdfd488dbfec8f1a727438397f9d79cb0c19b19ae54c"
+                        class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1">
+                    <h1>Ingreso de operador</h1>
+                    <br>
+                    {{error}}
+                    <form action="/sigin/" method="POST">
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-0">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                <label class="form-check-label" for="form2Example3">
+                                    Recuérdame
+                                </label>
+                            </div>
+                            <a href="tel:+573133895726" class="text-body">¿Olvidaste la contraseña?</a>
+                        </div>
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button class="btn btn-primary btn-lg">Ingresar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}
