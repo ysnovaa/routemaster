@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 class conductores(models.Model):
     documento = models.CharField(max_length=12)
     nombre_completo = models.CharField(max_length=150)
+    fechaNacimiento = models.DateField(auto_now=False, auto_now_add=False)
     edad = models.IntegerField()
     tipo_licencia = models.CharField(max_length=10)
     bus_asignado = models.IntegerField()

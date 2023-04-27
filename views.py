@@ -5,11 +5,9 @@ from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from .forms import ConductorForm
 
-
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
-
 
 def signup(request):
     if request.method == 'GET':
@@ -34,7 +32,6 @@ def signup(request):
             'error': 'Las contraseñas no coinciden!'
         })
 
-
 def horarios(request):
     return render(request, 'horarios.html')
 
@@ -51,15 +48,9 @@ def crear_conductor(request):
         #nuevo_conductor.save()
         return redirect('horarios')
 
-def ver_ruta(request):
-    return render(request,'ver_ruta.html')
-    
-
-
 def signout(request):
     logout(request)
     return redirect('home')
-
 
 def sigin(request):
     if request.method == 'GET':
@@ -77,8 +68,3 @@ def sigin(request):
         else:
             login(request, user)
             return redirect('horarios')
-        
-def sonar(request):
-    return render(request,'sonar.html')
-
-	
