@@ -24,11 +24,16 @@ urlpatterns = [
     path('horarios/', views.horarios, name='horarios'), 
     path('horarios/crear_conductor/', views.crear_conductor, name='crear_conductor'), 
     path('horarios/ver_conductores/', views.ver_conductores, name='ver_conductores'),
+    path('horarios/ver_vehiculos/', views.ver_vehiculos, name='ver_vehiculos'),
     path('horarios/ver_conductores/<int:id>/', views.ver_detalle_conductor, name='ver_detalle_conductor'),
-    path('horarios/rutas/', views.rutas, name='rutas'),
-    path('horarios/infracciones/', views.infracciones, name='infracciones'),
+    path('horarios/rutas/', views.ver_rutas, name='rutas'),
+    path('horarios/infracciones/', views.ver_infracciones, name='infracciones'),
     path('horarios/reportes/', views.reportes, name='reportes'),
+    path('horarios/crear_reporte/', views.crear_reporte, name='crear_reporte'), 
     path('logout/', views.signout, name='logout'),
     path('sigin/', views.sigin, name='sigin'),
+    path('horarios/importar_conductores/', views.importar_conductores, name='importar_conductores'),
+    path('horarios/importar_vehiculos/', views.importar_vehiculos, name='importar_vehiculos'),
+    path('horarios/importar_reportes/', views.importar_reportes, name='importar_reportes'),
     
 ]

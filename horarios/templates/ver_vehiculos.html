@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Listado de vehículos</h1>
+
+<ul>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Número interno</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Ver</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vehiculo in vehiculos %}
+                <tr>
+                    <th scope="row">{{vehiculo.id}}</th>
+                    <th>{{vehiculo.numero_interno}}</th>
+                    <td>{{vehiculo.tipo}}</td>
+                    <td>{{vehiculo.placa}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a class="btn btn-sm btn-success" href="#" ><i class="fa fa-eye"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-primary btn-rounded btn-lg" href="/horarios/">
+            Regresar
+        </a>
+    </div>
+</ul>
+
+
+{% endblock %}

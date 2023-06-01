@@ -1,5 +1,9 @@
 from django.contrib import admin
-from .models import conductores
+from .models import *
 
-# Register your models here.
 admin.site.register(conductores)
+admin.site.register(rutas)
+admin.site.register(vehiculos)
+admin.site.register(infracciones)
+admin.site.register(ReporteProgramacion)
+admin.site.register(reporteGeneral)

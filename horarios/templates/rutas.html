@@ -3,44 +3,76 @@
 {% block content %}
 <h1>Rutas de operación</h1>
 <br>
-<div class="row row-cols-1 row-cols-md-2">
-    <div class="col mb-4">
+<h3>Vista resumen de rutas</h3>
+
+<ul>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre de la ruta</th>
+                    <th scope="col">Geocerca de control</th>
+                    <th scope="col">Ver detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ruta in rutas %}
+                <tr>
+                    <th scope="row">{{ruta.id}}</th>
+                    <th>{{ruta.nombre}}</th>
+                    <td>{{ruta.geocerca}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a class="btn btn-sm btn-success" href="#" ><i class="fa fa-eye"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</ul>
+
+<div class="row row-cols-1 row-cols-md-2" >
+    <div class="col mb-4" id="1">
         <div class="card">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1HrPAkSl8YlIRKMDonhyxLVAjGzADgh8&ehbc=2E312F"
                 width="640" height="480"></iframe>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col mb-4" id="2">
         <div class="card">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1qqCQfAT7F9ni_e-F6HYyiSDailGfyes&ehbc=2E312F"
                 width="640" height="480"></iframe>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col mb-4" id="3">
         <div class="card">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1rtDO3oIja8P2h9v_nAfdK5PcP32W7K4&ehbc=2E312F"
                 width="640" height="480"></iframe>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col mb-4" id="4">
         <div class="card">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1YTSC5gURkVEP9xdwj_0AyJrW_fpsmB8&ehbc=2E312F"
                 width="640" height="480"></iframe>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col mb-4" id="5">
         <div class="card">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=14SprkRS7awK-ymG2Ze_2xFrGXDPzsNk&ehbc=2E312F"
                 width="640" height="480"></iframe>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col mb-4" id="6">
         <div class="card">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fQPE132uBcA_7uZrfV9Ib_YUODX2WgM&ehbc=2E312F"
                 width="640" height="480"></iframe>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col mb-4" id="7">
         <div class="card">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1WV0bU5pxe3_Z8Kam-hxhatyFAYp8QiM&ehbc=2E312F"
                 width="640" height="480"></iframe>

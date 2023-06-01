@@ -4,4 +4,58 @@
 
 <h1>Listado de reportes</h1>
 
+
+<ul>
+    <br>
+    <div class="table-responsive-lg">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Nombre completo</th>
+                    <th scope="col">Bus asignado</th>
+                    <th scope="col">Tipo de bus asignado</th>
+                    <th scope="col">Placa del bus asignado</th>
+                    <th scope="col">Ruta asignada</th>
+                    <th scope="col">Viajes programados</th>
+                    <th scope="col">Tabla asignada</th>
+                    <th scope="col">Notificar</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for reportes in reportes %}
+                <tr>
+                    <td scope="row">{{reportes.id}}</td>
+                    <td>{{reportes.documento}}</td>
+                    <td>{{reportes.nombre_completo}}</td>
+                    <td>{{reportes.bus_asignado}}</td>
+                    <td>{{reportes.tipo_bus_asignado}}</td>
+                    <td>{{reportes.placa_bus_asignado}}</td>
+                    <td>{{reportes.ruta_asignada}}</td>
+                    <td>{{reportes.viajes_programados}}</td>
+                    <td>{{reportes.tabla_asignada}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-info" href="https://api.whatsapp.com/send/?phone=3176091249"><i
+                                class="fa fa-address-card"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+            <form action="{% url 'crear_reporte' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Generar reporte individual</button>
+            </form>
+        </div>
+        <br>
+        <a class="btn btn-primary btn-rounded btn-lg" href="/horarios/">
+            Regresar
+        </a>
+    </div>
+</ul>
+
 {% endblock %}

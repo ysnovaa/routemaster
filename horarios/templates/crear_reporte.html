@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Crear reporte individual</h1>
+    {{error}}
+    <form action="/horarios/crear_reporte/" method="POST">
+        <br>
+        {% csrf_token %}
+        {{form.as_p}}
+        {{error}}
+        <button class="btn btn-success">
+            Guardar
+        </button>
+    </form>
+<br>
+    <a class="btn btn-primary btn-rounded btn-lg" href="/horarios/reportes/">
+        Regresar
+    </a>
+{% endblock %}

@@ -4,34 +4,60 @@
 
 <h1>Control de infracciones</h1>
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre completo</th>
-            <th scope="col">Control</th>
-            <th scope="col">Minutos</th>
-            <th scope="col">Sanción</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Juan José Uribe Villa</td>
-            <td>San Ignacio</td>
-            <td>1</td>
-            <td>Monetaria</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jhojan Alexander Parias Gómez</td>
-            <td>P. Madre Laura</td>
-            <td>3</td>
-            <td>Monetaria</td>
-        </tr>
-    </tbody>
-</table>
-<a class="btn btn-outline-success my-2 my-sm-0 text-end" href="/horarios/infracciones/"><i
-    class="fa fa-car-crash"></i>Nuevo rastreo</a>
+<ul>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre completo</th>
+                    <th scope="col">Control</th>
+                    <th scope="col">Minutos</th>
+                    <th scope="col">Sanción</th>
+                    <th scope="col">Notificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for infraccion in infracciones %}
+                <tr>
+                    <th scope="row">{{infraccion.id}}</th>
+                    <th>{{infraccion.documento}}</th>
+                    <td>{{infraccion.control}}</td>
+                    <td>{{infraccion.minutos}}</td>
+                    <td>{{infraccion.sancion}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a class="btn btn-sm btn-info" href="https://api.whatsapp.com/send/?phone=3176091249"><i class="fa fa-address-card"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</ul>
+
+<a class="btn btn-outline-success my-2 my-sm-0 text-end" onclick="rastreo()"><i class="fa fa-car-crash"></i>Nuevo
+    rastreo</a>
+
+
+<script>
+    function rastreo() {
+        Swal.fire({
+            html: `<h2>Rastreo completo</h2>
+            <br>
+            <p>Registro creado con el token <strong>asdaYDSHJkdfsjs21</strong></p>
+            <br>
+            <a href="/horarios/infracciones/">Notificar conductores</a>
+            `,
+        });
+    }
+
+    function crear_infraccion(documento, control, minutos, sancion){
+        infraccion = Infracciones.objects.create(documento=documento, control=control, minutos=minutos, sancion=sancion)
+        infraccion.save()
+    }
+</script>
 
 {% endblock %}
