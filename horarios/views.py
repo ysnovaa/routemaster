@@ -6,7 +6,6 @@ from django.db import IntegrityError
 from .forms import ConductorForm, ReporteForm
 from .models import conductores
 from .models import rutas, infracciones, ReporteProgramacion, vehiculos, reporteGeneral
-from tablib import Dataset
 from .resources import conductoresResource
 from openpyxl import load_workbook
 
